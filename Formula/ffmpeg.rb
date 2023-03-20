@@ -200,6 +200,11 @@ class Ffmpeg < Formula
       args << "--enable-libopencore-amrnb"
       args << "--enable-libopencore-amrwb"
     end
+    
+    # XXX
+    args << "--disable-optimizations" 
+    args << "--enable-debug=3" 
+    args << "--disable-stripping"
 
     system "./configure", *args
     system "make", "install"
