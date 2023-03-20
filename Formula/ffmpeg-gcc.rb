@@ -210,7 +210,7 @@ class FfmpegGcc < Formula
     args << "--extra-cxxflags=-g"
 
     system "./configure", *args
-    system "make", "install"
+    system "make", "V=1", "install"
 
     # Build and install additional FFmpeg tools
     system "make", "alltools"
