@@ -109,7 +109,6 @@ class FfmpegDebug < Formula
     args = %W[
       --prefix=#{prefix}
       --enable-shared
-      --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
       --enable-gpl
@@ -205,6 +204,8 @@ class FfmpegDebug < Formula
     args << "--disable-optimizations" 
     args << "--enable-debug=3" 
     args << "--disable-stripping"
+    args << "--cc=gcc-12" 
+    args << "--cxx=g++-12"
 
     system "./configure", *args
     system "make", "install"
