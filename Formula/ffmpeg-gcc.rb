@@ -1,4 +1,4 @@
-class FfmpegDebug < Formula
+class FfmpegGcc < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
   url "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz"
