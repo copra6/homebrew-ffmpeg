@@ -206,6 +206,8 @@ class FfmpegGcc < Formula
     args << "--disable-stripping"
     args << "--cc=gcc-12" 
     args << "--cxx=g++-12"
+    args << "--extra-cflags=-g"
+    args << "--extra-cxxflags=-g"
 
     system "./configure", *args
     system "make", "install"
